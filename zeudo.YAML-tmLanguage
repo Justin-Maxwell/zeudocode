@@ -1,0 +1,80 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: zeudocode
+scopeName: source.zeudocode
+fileTypes: [zeudo]
+uuid: d0c1b87c-6846-4a53-a4d1-c91bd3325bc9
+
+patterns:
+
+- comment: comments
+  name: comment.line.zeudocode  
+  match: (\/\/ .*|^#\s.*|^;.*)
+
+- begin: /\*
+  end: \*/
+  name: comment.block.documentation.zeudocode
+
+- begin: <--
+  end: -->
+  name: comment.block.zeudocode
+
+- comment: keywords
+  name: keyword.control.zeudocode
+  match: \b(if|then|elif|else|fi|end|endif|for|next|while|wend|loop|until|test|select|case|show|func|function|per|clear)\b
+
+- comment:  operator keywords
+  name: keyword.other.zeudocode 
+  match: \b(let|set|not|and|or|AND|OR|xor|is|to)\b
+
+- comment: operator punctuation
+  name: keyword.operator.zeudocode
+  match: (=|==|<=|>=|<>|!=|:=|-->|\+|\+\+|--|\+=|-=|\*|\/)
+
+- comment: isolated operators
+  name: keyword.operator.zeudoco
+  match: \s(&&|&|\||\|\||!|!!)\s
+
+- comment: language constants 
+  name: constant.language.zeudocode
+  match: \b(true|false|TRUE|FALSE|yes|no|YES|NO|etc)\b
+  
+
+- comment: hex constants
+  name: constant.numeric.zeudocode
+  match: (0x|#)[0-9A-Fa-f]+
+
+- comment: numeric constants
+  name: constant.numeric.zeudocode
+  match: \b[0-9]+\.?[0-9]*\b
+
+- comment: String Constants
+  name: string.quoted.double
+  match: \".*\"
+- name: string.quoted.single
+  match: (\'.*\')
+
+- comment: Objects
+  name: support.class.zeudocode
+  match: \b([A-Z][a-z\-_]+[A-Za-z\-_]*)\b
+
+- comment: Functions
+  name: entity.name.function
+  match: \b[a-z][A-Za-z0-9\-_]+\(\)?
+  # end: \)
+
+- comment: Variables
+  name: variable.parameter.zeudocode
+  match: ([\$|\%][a-z][\w\-_]*)
+
+
+- comment: brackets
+  name: support.other.zeudocode
+  match: (\(|\)|\{|\}|\[|\]|\<|\>)
+
+- comment: defined constants
+  name: constant.other.zeudocode
+  match: \b([A-Z]+[A-Z0-9\-_]*)\b
+
+
+...
