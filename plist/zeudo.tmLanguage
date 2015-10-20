@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>zeudo</string>
+	</array>
+	<key>name</key>
+	<string>zeudocode</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>comments</string>
+			<key>match</key>
+			<string>(\/\/ .*|^#\s.*|^;.*)</string>
+			<key>name</key>
+			<string>comment.line.zeudocode</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.documentation.zeudocode</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>&lt;--</string>
+			<key>end</key>
+			<string>--&gt;</string>
+			<key>name</key>
+			<string>comment.block.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>keywords</string>
+			<key>match</key>
+			<string>\b(if|then|elif|else|fi|end|endif|for|next|while|wend|loop|until|test|select|case|show|func|function|per|clear)\b</string>
+			<key>name</key>
+			<string>keyword.control.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>operator keywords</string>
+			<key>match</key>
+			<string>\b(let|set|not|and|or|AND|OR|xor|is|to)\b</string>
+			<key>name</key>
+			<string>keyword.other.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>operator punctuation</string>
+			<key>match</key>
+			<string>(=|==|&lt;=|&gt;=|&lt;&gt;|!=|:=|--&gt;|\+|\+\+|--|\+=|-=|\*|\/)</string>
+			<key>name</key>
+			<string>keyword.operator.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>isolated operators</string>
+			<key>match</key>
+			<string>\s(&amp;&amp;|&amp;|\||\|\||!|!!)\s</string>
+			<key>name</key>
+			<string>keyword.operator.zeudoco</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>language constants</string>
+			<key>match</key>
+			<string>\b(true|false|TRUE|FALSE|yes|no|YES|NO|etc)\b</string>
+			<key>name</key>
+			<string>constant.language.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>hex constants</string>
+			<key>match</key>
+			<string>(0x|#)[0-9A-Fa-f]+</string>
+			<key>name</key>
+			<string>constant.numeric.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>numeric constants</string>
+			<key>match</key>
+			<string>\b[0-9]+\.?[0-9]*\b</string>
+			<key>name</key>
+			<string>constant.numeric.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>String Constants</string>
+			<key>match</key>
+			<string>\".*\"</string>
+			<key>name</key>
+			<string>string.quoted.double</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\'.*\')</string>
+			<key>name</key>
+			<string>string.quoted.single</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Objects</string>
+			<key>match</key>
+			<string>\b([A-Z][a-z\-_]+[A-Za-z\-_]*)\b</string>
+			<key>name</key>
+			<string>support.class.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Functions</string>
+			<key>match</key>
+			<string>\b[a-z][A-Za-z0-9\-_]+\(\)?</string>
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Variables</string>
+			<key>match</key>
+			<string>([\$|\%][a-z][\w\-_]*)</string>
+			<key>name</key>
+			<string>variable.parameter.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>brackets</string>
+			<key>match</key>
+			<string>(\(|\)|\{|\}|\[|\]|\&lt;|\&gt;)</string>
+			<key>name</key>
+			<string>support.other.zeudocode</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>defined constants</string>
+			<key>match</key>
+			<string>\b([A-Z]+[A-Z0-9\-_]*)\b</string>
+			<key>name</key>
+			<string>constant.other.zeudocode</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.zeudocode</string>
+	<key>uuid</key>
+	<string>d0c1b87c-6846-4a53-a4d1-c91bd3325bc9</string>
+</dict>
+</plist>
